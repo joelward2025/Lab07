@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct Lab07App: App {
+    @State var articleManger = ArticleViewModel()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ArticleView()
+                .environment(articleManger)
         }
     }
 }
