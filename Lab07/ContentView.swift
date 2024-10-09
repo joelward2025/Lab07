@@ -14,7 +14,7 @@ struct ArticleView: View {
             VStack {
                 Image(news.model.imageName)
                     .resizable()
-                    .frame(height: geometry.size.height / 3)
+                    .frame(width: geometry.size.width, height: geometry.size.height / 3)
                 Text(news.model.category)
                     .textCase(/*@START_MENU_TOKEN@*/.uppercase/*@END_MENU_TOKEN@*/)
                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -36,7 +36,6 @@ struct ArticleView: View {
                     Spacer()
                 }
             }
-            .padding()
         }
     }
 }
